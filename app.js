@@ -13,15 +13,15 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-	res.sendFile(path.join(__dirname, '..', 'components', 'home.htm'));
+	res.sendFile(path.join(__dirname, 'components', 'home.htm'));
 });
 
 app.get('/about', function (req, res) {
-	res.sendFile(path.join(__dirname, '..', 'components', 'about.htm'));
+	res.sendFile(path.join(__dirname, 'components', 'about.htm'));
 });
 
 app.get('/uploadUser', function (req, res) {
-	res.sendFile(path.join(__dirname, '..', 'components', 'user_upload_form.htm'));
+	res.sendFile(path.join(__dirname, 'components', 'user_upload_form.htm'));
 });
 
 app.post('/uploadSuccessful', urlencodedParser, async (req, res) => {
