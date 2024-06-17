@@ -13,12 +13,12 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.engine('ejs', ejs.__express);
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '..', 'server', 'views'));
-// app.set('views', path.join(__dirname, 'server', 'views'));
+// app.set('views', path.join(__dirname, '..', 'server', 'views'));
+app.set('views', path.join(__dirname, 'server', 'views'));
 
 app.use(express.static('public'));
-const routes = require('../server/routes/routes');
-// const routes = require('./server/routes/routes');
+// const routes = require('../server/routes/routes');
+const routes = require('./server/routes/routes');
 app.use('/', routes);
 
 
